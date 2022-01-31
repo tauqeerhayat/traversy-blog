@@ -1,5 +1,6 @@
 body{
-    background-image: url('/images/bg.jpg');
+    /* background-image: url('/images/bg.jpg'); */
+    background-color: lightgray;
 
 }
 
@@ -46,6 +47,14 @@ body{
     background-color: #343A40 !important;
     box-shadow: none !important;
 }
+.secondSubMenu button{
+    /* background-color: #343A40 !important;
+    color: white !important;
+    border-color: none !important; */
+    all: unset;
+    margin-right: 15px;
+    color: white;
+}
 .menu ul li a:hover{
     background-color: crimson;
     border-radius: 5px;
@@ -78,6 +87,46 @@ body{
 
 .indexPage h2{
     padding: 20px;
-    background-color: crimson;
+    background-color: lightseagreen;
     border-radius: 5px;
+}
+
+/************************************ Register Page ************************************/
+
+.registerPage{
+    margin-top: 20px;
+    /* background-image: url('/public/images/bg.jpg'); */
+    background-color: #343A40;
+    color: white;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: -1px 5px 10px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -1px 5px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 5px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.registerPage h2{
+    margin-bottom: 40px;
+}
+
+.form-group{
+    margin-bottom: 20px !important;
+}
+
+/************************************** Dashboard Page **************************************/
+
+.dashboardPage{
+    margin-top: 20px;
+    /* background-image: url('/public/images/bg.jpg'); */
+    background-color: #343A40;
+    color: white;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: -1px 5px 10px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -1px 5px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 5px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.successMsg{
+    font-size: 20px;
 }

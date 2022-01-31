@@ -8,19 +8,28 @@
     <link rel="stylesheet" href="{{ asset('css/app.css')}}">
     <title>Posty</title>
 </head>
-<body style="background-color: ">
+<body>
     <div class="container-fluid">
         <nav class=" menu">
             <ul class="d-flex">
-                <li class="active"><a href="">Home</a></li>
-                <li><a href="">Dashbaord</a></li>
-                <li><a href="">Posts</a></li>
+                <li><a href="{{ url('/')}}">Home</a></li>
+                <li><a href="{{ route('dashboard') }}">Dashbaord</a></li>
+                <li><a href="{{ url('/posts')}}">Posts</a></li>
             </ul>
             <ul class="d-flex secondSubMenu">
-                <li class="active"><a href="">Tauqeer Hayat</a></li>
-                <li><a href="">Login</a></li>
-                <li><a href="">Register</a></li>
-                <li><a href="">Logout</a></li>
+                @if (auth()->user())
+                    <li class="active"><a href="">{{auth()->user()->name}}</a></li>
+                    <form action="{{ route('logout') }}" method="post">
+                        @csrf
+                        <button type="submit" value="" >Logout</button>
+                    </form>
+                @else
+                    <li><a href="{{ route('login')}}">Login</a></li>
+                    <li><a href="{{ route('register')}}">Register</a></li>
+                @endif
+
+
+
             </ul>
         </nav>
         @yield('content')
